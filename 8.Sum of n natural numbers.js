@@ -1,7 +1,7 @@
 // Program to display Sum of n natural numbers
 
 let sum = 0;
-const n = parseInt(prompt('Enter a number'));
+const n = parseInt(prompt('Enter a number: '));
 
 
 //using for loop:
