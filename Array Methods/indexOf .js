@@ -1,6 +1,7 @@
 // Javascript array methods to find elements:
 
 //indexOf() – locate an element in an array.
+// If the array doesn’t include the element, the indexOf() returns -1.
 //syntax: Array.indexOf(searchElement, fromIndex)
 
 let scores = [10, 20, 30, 40, 50, 60];
@@ -12,6 +13,9 @@ console.log(scores.indexOf(60))
 console.log(scores.indexOf(20, -1));    // 5 (fromIndex = 6+ (-1) = 5)
 console.log(scores.indexOf(20, -5));    // 1 (fromIndex = 6+ (-5) = 1)
 
+[NaN].indexOf(NaN); // -1  
+//indexOf() uses strict equality operator (===) for comparison, therefore, it doesn’t work with NaN
+
 var guests = [
     { name: 'John Doe', age: 30 },
     { name: 'Lily Bush', age: 20 },
@@ -22,6 +26,8 @@ console.log(guests.indexOf({ name: 'John Doe', age: 30 })); //-1
 //The lastIndexOf() method returns the index of the last occurrence of the searchElement in the array. .It returns -1 if it cannot find the element.
 //syntax: Array.lastIndexOf(searchElement, [fromIndex = Array.length - 1])
 var rupees = [10, 20, 30, 10, 40, 20];
-console.log(rupees.lastIndexOf(10));// 3
-console.log(rupees.lastIndexOf(20));// 5
-console.log(rupees.lastIndexOf(50));// -1   (number 50 is not in the scores)
+console.log(rupees.lastIndexOf(10));    // 3
+console.log(rupees.lastIndexOf(20));    // 5
+console.log(rupees.lastIndexOf(50));    // -1   (number 50 is not in the scores)
+
+
