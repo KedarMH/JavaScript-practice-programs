@@ -39,9 +39,10 @@ const companies = [
     { name: 'Avalon', Category: "Service based", start: 1989, end: 2010 }
 ];
 
-const serviceBased = companies.filter(company => {
-    if (company.Category === "Service based") {
-        return true;
-    }
+const serviceBased = companies.map((company, index) =>
+    console.log(company, index)
+)
+const sb = companies.map((company, index) => {
+    return `${company.name}: ${company.Category}`
 })
-console.log(serviceBased);
+console.log(sb);

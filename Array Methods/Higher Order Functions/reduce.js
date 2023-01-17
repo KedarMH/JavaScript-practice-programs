@@ -11,14 +11,14 @@ function findSum(arr) {
     }
     return sum;
 }
-console.log(findSum(arr));
+// console.log(findSum(arr));
 
 //ex1) sum of arr elements using reduce() method
 const output = arr.reduce(function (accumulator, currentValue) {
     accumulator = accumulator + currentValue;
     return accumulator;
 }, 0)
-console.log(output);
+// console.log(output);
 
 //ex2) find max value in array 
 const newArr = [5, 1, 3, 2, 6];
@@ -33,7 +33,7 @@ function findMax(newArr) {
     }
     return max;
 }
-console.log(findMax(newArr));
+// console.log(findMax(newArr));
 
 //using reduce()
 const res = newArr.reduce(function (max, currentValue) {
@@ -42,7 +42,7 @@ const res = newArr.reduce(function (max, currentValue) {
     }
     return max
 }, 0)
-console.log(res)
+// console.log(res)
 
 //ex3) Subtracting Numbers in Array using reduce() method
 // in the following subtract all numbers from first number
@@ -53,7 +53,7 @@ const numbers = [1800, 50, 300, 20, 100];
 let difference = numbers.reduce((accumulator, currentValue) => {
     return accumulator - currentValue                                            //not passing inital value
 })
-console.log(difference);
+// console.log(difference);
 
 //ex4) 
 const expenses = [1800, 2000, 3000, 5000, 500];
@@ -63,7 +63,7 @@ const salary = 15000
 let savings = expenses.reduce(
     (accumulator, currentValue) => accumulator - currentValue, salary            //passing salary as initial value
 )
-console.log(savings);
+// console.log(savings);
 
 //ex5) To calculate the total amount of the products in the shopping cart
 let shoppingCart = [
@@ -87,7 +87,7 @@ let shoppingCart = [
 let totalAmount = shoppingCart.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.qty * currentValue.price
 }, 0);
-console.log(totalAmount)
+// console.log(totalAmount)
 
 //ex6)find number of users with same age 
 
@@ -108,4 +108,22 @@ const userAge = users.reduce(function (accumulator, currentValue) {
     return accumulator;
 }, {})
 
-console.log(userAge)
+// console.log(userAge)
+
+//ex 7: find total of all ages
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+let total = 0;
+for (let i = 0; i < ages.length; i++) {
+    total += ages[i]
+}
+console.log(total);
+
+//using reduce
+const totalAge = ages.reduce(function (total, age) {
+    return total + age
+}, 0)
+console.log(totalAge)
+//using arrow 
+const totalAge1 = ages.reduce((total, age) => total + age, 0)
+console.log(totalAge1);
