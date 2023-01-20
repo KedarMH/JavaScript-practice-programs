@@ -10,7 +10,7 @@ function reverseString(string) {
     }
     return newString;
 }
-// console.log(reverseString(string))
+console.log(reverseString(string))
 
 //The for loop is used to iterate over the strings. During the first iteration, str.length - 1 gives the position of the last element. That element is added to the newString variable.
 //This process continues for all the string elements.
