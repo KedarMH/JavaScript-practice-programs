@@ -1,7 +1,6 @@
 //  Simple calculator program
 
 let result;
-
 // operator input
 const operator = prompt('Enter operator (+,-,* or /):');
 
@@ -9,6 +8,7 @@ const operator = prompt('Enter operator (+,-,* or /):');
 const num1 = parseFloat(prompt('Enter first number: '));
 const num2 = parseFloat(prompt('Enter second number: '));
 
+//switch statement
 switch (operator) {
     case '+':
         result = num1 + num2;
